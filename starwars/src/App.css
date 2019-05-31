@@ -1,29 +1,61 @@
+@font-face {
+	font-family: "starjhol";
+	src: url("/starwars/src/fonts/Starjhol.ttf");
+}
+
 .App {
 	text-align: center;
+	font-family: "starjhol";
 }
 .Header {
 	color: #443e3e;
-	text-shadow: 1px 1px 5px #fff;
+	text-shadow: 1px 1px 5px gold;
 }
 /* write your parent styles in here for your App.js */
 .charList {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-evenly;
-	width: 100%;
 }
 
 .charTile {
 	width: 30%;
+	padding-bottom: 2%;
 	display: flex;
 	background: rgba(220, 220, 220, 0.5);
 	margin: 1%;
 }
 
+.namePic {
+	width: 60%;
+	padding: 1%;
+}
+
 .name {
-	width: 50%;
+	font-size: 1.5rem;
+	color: black;
+	text-shadow: -1px 0 gold, 0 1px gold, 1px 0 gold, 0 -1px gold;
+	font-weight: 700;
+}
+
+.pic {
+	width: 70%;
+	height: 70%;
+	margin: 0 auto;
+}
+
+.pic img {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
 }
 
 .charInfo {
-	width: 50%;
+	width: 30%;
+	text-align: left;
+	padding-left: 5%;
+	padding-top: 10%;
+	font-size: 1.2rem;
+	color: black;
+	text-shadow: -1px 0 #da251d, 0 1px #da251d, 1px 0 #da251d, 0 -1px #da251d;
 }

@@ -7,7 +7,7 @@ class CharList extends React.Component {
 		return (
 			<div className="charList">
 				{this.props.charArr.map(el => (
-					<CharTile char={el} />
+					<CharTile char={el} key={el.name} />
 				))}
 			</div>
 		);
