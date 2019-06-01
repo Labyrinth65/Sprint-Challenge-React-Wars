@@ -6,10 +6,7 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			starwarsChars: [],
-			next: "",
-			prev: "",
-			current: ""
+			starwarsChars: []
 		};
 	}
 
