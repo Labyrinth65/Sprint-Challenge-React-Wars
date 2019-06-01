@@ -29,6 +29,14 @@ class App extends Component {
 			: this.getCharacters([this.state.prev]);
 	};
 
+	firstPage = () => {
+		this.getCharacters("https://swapi.co/api/people/");
+	};
+
+	lastPage = () => {
+		this.getCharacters("https://swapi.co/api/people/?page=9");
+	};
+
 	getCharacters = URL => {
 		// feel free to research what this code is doing.
 		// At a high level we are calling an API to fetch some starwars data from the open web.
@@ -54,6 +62,14 @@ class App extends Component {
 		return (
 			<div className="App">
 				<h1 className="Header">React Wars</h1>
+				<div className="buttons">
+					<button onClick={this.firstPage} className="button">
+						First
+					</button>
+					<button onClick={this.lastPage} className="button">
+						Last
+					</button>
+				</div>
 				<div className="buttons">
 					<button onClick={this.prevPage} className="button">
 						Prev

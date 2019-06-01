@@ -10,9 +10,9 @@ const CharTile = props => {
 				<div className="pic">
 					<img
 						src={
-							pics.filter(el => el.name === props.char.name)[0] === undefined
+							pics.find(el => el.name === props.char.name) === undefined
 								? "../assets/Logo.png"
-								: pics.filter(el => el.name === props.char.name)[0].img
+								: pics.find(el => el.name === props.char.name).img
 						}
 						alt=""
 					/>
@@ -22,8 +22,10 @@ const CharTile = props => {
 				<p className="birthYear">Born: {props.char.birth_year}</p>
 				<p className="gender">
 					Gender:{" "}
-					{props.char.gender.charAt(0).toUpperCase() +
-						props.char.gender.slice(1)}
+					{props.char.gender === "n/a"
+						? props.char.gender.toUpperCase()
+						: props.char.gender.charAt(0).toUpperCase() +
+						  props.char.gender.slice(1)}
 				</p>
 			</div>
 		</div>
