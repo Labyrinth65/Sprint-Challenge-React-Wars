@@ -9,10 +9,13 @@ const CharTile = props => {
 				<p className="name">{props.char.name.toUpperCase()}</p>
 				<div className="pic">
 					<img
-						src={pics.filter(el => el.name === props.char.name)[0].img}
+						src={
+							pics.filter(el => el.name === props.char.name)[0] === undefined
+								? "../assets/Logo.png"
+								: pics.filter(el => el.name === props.char.name)[0].img
+						}
 						alt=""
 					/>
-					{/* <img src={require("../assets/Luke.jpg")} alt="" /> */}
 				</div>
 			</div>
 			<div className="charInfo">

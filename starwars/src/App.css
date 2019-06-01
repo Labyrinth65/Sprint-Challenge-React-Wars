@@ -12,6 +12,12 @@
 	text-shadow: 1px 1px 5px gold;
 }
 /* write your parent styles in here for your App.js */
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 2%;
+}
+
 .charList {
 	display: flex;
 	flex-flow: row wrap;
@@ -48,6 +54,7 @@
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
+	object-fit: cover;
 }
 
 .charInfo {
